@@ -1,0 +1,11 @@
+groups:
+- name: hosts
+  rules:
+  - alert: Uptime
+    expr: up == 0
+    for: 15s
+    labels:
+      severity: critical
+    annotations:
+      summary: "O servidor NGNIX está offline!"
+      description: "O servidor NGNIX parou de responder."

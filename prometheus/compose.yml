@@ -1,0 +1,8 @@
+services:
+  server:
+    build: config-prom/.
+    volumes:
+      - ./config-prom/.:/etc/prometheus
+    ports:
+      - 9090:9090
+      
