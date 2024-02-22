@@ -1,8 +1,15 @@
 services:
-  server:
-    build: config-prom/.
+  prometheus-server:
+    build: prometheus-server/.
     volumes:
-      - ./config-prom/.:/etc/prometheus
+      - ./prometheus-server/.:/etc/prometheus
     ports:
       - 9090:9090
+  
+  alertmanager:
+    build: alertmanager/.
+    volumes:
+      - ./alertmanager/.:/etc/alertmanager
+    ports:
+      - 9093:9093
       

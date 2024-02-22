@@ -1,0 +1,14 @@
+route:
+  receiver: 'mail-alerts'
+  group_by: ['alertname']
+  group_wait: 30s
+  group_interval: 5m
+  repeat_interval: 1m
+receivers:
+  - name: 'mail-alerts'
+    email_configs:
+    - smarthost: 'smtp.gmail.com:587'
+      to: 'you_to'
+      from: 'you_from'
+      auth_username: 'you_username'
+      auth_password: "your_auth_password"

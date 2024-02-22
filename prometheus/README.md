@@ -8,7 +8,7 @@ Prometheus Services:
 - Alertmanager
 - Node_exporter
  
- You launch container with command bellow
+ We will use Docker Compose to run multi-container applications with the command below:
  ```
 docker compose up
  ```
@@ -17,11 +17,11 @@ If you want to run services in the background you can pass the `-d` flag(for "de
 docker compose up -d
 ```
 
-Stop your prometheus
+Stops and removes the containers.
 ```
-docker compose stop
+docker compose down
 ```
-Remove `--volumes`
+Removing volumes docker compose
 ```
 docker compose down --volumes
 ```
@@ -39,3 +39,31 @@ To access prometheus, open the following URL in your browser:
 ```
 http://localhost:9090
 ```
+
+## 
+# Alertmanager
+The Alertmanager seds alerts for slack or E-mal
+
+Port
+
+| host    | container  |
+| :------ | :--------- |
+| `9093`  | `9093`     | 
+
+To access alertmanager, open the following URL in your browser:
+```
+http://localhost:9093
+
+
+## 
+# Node_exporter
+
+Port
+
+| host    | container  |
+| :------ | :--------- |
+| ``  | `*`     | 
+
+To access node_exporter, open the following URL in your browser:
+```
+http://localhost:
