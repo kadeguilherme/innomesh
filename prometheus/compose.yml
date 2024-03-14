@@ -12,4 +12,15 @@ services:
       - ./alertmanager/.:/etc/alertmanager
     ports:
       - 9093:9093
+
+  node-exporter:
+    container_name: nginx-prometheus-exporter
+    build: node-exporter/.
+    ports:
+      - "9113:9113"
+    
+  nginx:
+    build: ngnix/.
+    ports:
+      - "9114:80"
       
