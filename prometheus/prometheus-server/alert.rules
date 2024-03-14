@@ -2,7 +2,7 @@ groups:
 - name: hosts
   rules:
   - alert: Uptime
-    expr: up == 0
+    expr: nginx_up == 0
     for: 15s
     labels:
       severity: critical
