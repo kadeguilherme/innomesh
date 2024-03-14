@@ -19,11 +19,11 @@ docker compose up -d
 
 Stops and removes the containers.
 ```
-docker compose down
+docker compose down --rmi all
 ```
 Removing volumes docker compose
 ```
-docker compose down --volumes
+docker compose down -v --rmi all
 ```
 ## 
 # Prometheus server
@@ -60,10 +60,10 @@ http://localhost:9093
 
 Port
 
-| host    | container  |
-| :------ | :--------- |
-| ``  | `*`     | 
+|   host   | container |
+|----------|-----------|
+|  9113    |   9113    | 
 
 To access node_exporter, open the following URL in your browser:
 ```
-http://localhost:
+http://localhost:9113
