@@ -30,7 +30,6 @@ docker compose down -v --rmi all
 The main Prometheus server which scrapes and stores time series data.
 
 Port
-
 | host    | container  |
 | :------ | :--------- |
 | `9090`  | `9090`     | 
@@ -42,10 +41,9 @@ http://localhost:9090
 
 ## 
 # Alertmanager
-The Alertmanager seds alerts for slack or E-mal
+The Alertmanager seds alerts for slack or E-email
 
 Port
-
 | host    | container  |
 | :------ | :--------- |
 | `9093`  | `9093`     | 
@@ -53,13 +51,13 @@ Port
 To access alertmanager, open the following URL in your browser:
 ```
 http://localhost:9093
-
+```
 
 ## 
 # Node_exporter
+Prometheus exporter for hardware and OS metrics exposed by *NIX kernels, written in Go with pluggable metric collectors.
 
 Port
-
 |   host   | container |
 |----------|-----------|
 |  9113    |   9113    | 
